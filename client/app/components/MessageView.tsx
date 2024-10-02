@@ -28,7 +28,7 @@ export function MessageView({ message, onDelete, sendVote }: MessageViewProps) {
         <button onClick={() => sendVote(-1)}>👎</button>
         {message.upvotes}
         <button onClick={() => sendVote(1)}>👍</button>
-        <button onClick={onDelete}>💀</button>
+        <button onClick={onDelete}>✅</button>
       </div>
       <p className="text-gray-800">{message.text}</p>
     </div>
