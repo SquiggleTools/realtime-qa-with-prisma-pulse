@@ -24,13 +24,19 @@ export function MessageView({ message, onDelete, sendVote }: MessageViewProps) {
           {new Date(message.createdAt).toLocaleString()}
         </span>
       </div>
-      <div className="float-right">
-        <button onClick={() => sendVote(-1)}>👎</button>
-        {message.upvotes}
-        <button onClick={() => sendVote(1)}>👍</button>
-        <button onClick={onDelete}>✅</button>
-      </div>
       <p className="text-gray-800">{message.text}</p>
+      <div>
+        {/* <button className="text-4xl p-4" onClick={() => sendVote(-1)}>
+          ⬇️
+        </button>
+        {message.upvotes}
+        <button className="text-4xl p-4" onClick={() => sendVote(1)}>
+          ⬆️
+        </button> */}
+        <button className="text-4xl p-4" onClick={onDelete}>
+          ✅
+        </button>
+      </div>
     </div>
   );
 }
